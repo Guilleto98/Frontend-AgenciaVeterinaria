@@ -7,7 +7,9 @@ import ConfirmarCuenta from './paginas/ConfirmarCuenta';
 
 
 function App() {
-  return (<BrowserRouter>
+
+  return (
+  <BrowserRouter>
     <Routes>
         <Route path='/' element={<AuthLayout/>}>
           <Route index element={<Login/>}/>
