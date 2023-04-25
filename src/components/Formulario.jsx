@@ -7,13 +7,13 @@ const Formulario = () => {
     const [nombre, setNombre] = useState('')
     const [propietario, setPropietario] = useState('')
     const [email, setEmail] = useState('')
-    const [fecha, setFecha] = useState(Date.now())
+    const [fecha, setFecha] = useState('')
     const [sintomas, setSintomas] = useState('')
 
     const [alerta, setAlerta] = useState({})
 
-    const { pacientes } = usePacientes()
-    console.log(pacientes)
+    const { guardarPaciente } = usePacientes()
+    
 
     const handleSubmit = (e)=>{
         e.preventDefault()
@@ -25,6 +25,9 @@ const Formulario = () => {
                 error: true
             })
         }
+
+        setAlerta({})
+        guardarPaciente({nombre, propietario, email, fecha, sintomas})
     }
 
     const {msg} = alerta;
