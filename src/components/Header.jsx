@@ -15,9 +15,9 @@ const Header = () => {
           <span className="text-white font-black"> Veterinaria</span>
         </h1>
 
-        <nav className='flex gap-4 items-center flex-col lg:flex-row mt-5 lg:mt-0 items-center'>
+        <nav className='flex gap-4 items-center flex-col lg:flex-row mt-5 lg:mt-0'>
           <Link to="/admin" className='text-white text-sm uppercase font-bold'>Pacientes</Link>
-          <Link to="/admin" className='text-white text-sm uppercase font-bold'>Perfil</Link>
+          <Link to="/admin/perfil" className='text-white text-sm uppercase font-bold'>Perfil</Link>
 
           <button
           type='button'
